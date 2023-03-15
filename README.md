@@ -26,7 +26,7 @@ Run the script `run.py` to import CSV files into DynamoDB tables. It takes two r
 You can run the script with the following command:
 
 ```bsh
-git clone https://github.com/alramalho/csv-into-dynamodb/blob/main/README.md
+git clone https://github.com/alramalho/csv-into-dynamodb
 
 python csv-into-dynamodb/run.py --file file.csv --table table_name
 ```
