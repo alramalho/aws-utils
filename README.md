@@ -18,29 +18,24 @@ pip install -r requirements.txt
 
 ### 2 run
 
-Run the script `csv-into-dynamodb.py` to import CSV files into DynamoDB tables. It takes two required arguments:
+Run the script `run.py` to import CSV files into DynamoDB tables. It takes two required arguments:
 
 - `--file` or `-f`: The path to the CSV file you want to import.
 - `--table` or `-t`: The name of the DynamoDB table you want to import the data into.
 
 You can run the script with the following command:
 
-```python
-python csv-into-dynamodb.py --file file.csv --table table_name
-```
+```bsh
+git clone https://github.com/alramalho/csv-into-dynamodb/blob/main/README.md
 
-Alternatively, you can use the short options:
-
-```python
-
-python csv-into-dynamodb.py -f file.csv -t table_name
+python csv-into-dynamodb/run.py --file file.csv --table table_name
 ```
 
 If you need help, you can use the `--help` or `-h` flag:
 
 ```python
 
-python csv-into-dynamodb.py --help
+python run.py --help
 ```
 
 This will print the help message, which includes information on the required and optional arguments, as well as a brief description of what the script does.
