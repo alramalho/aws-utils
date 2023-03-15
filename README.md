@@ -26,14 +26,14 @@ Run the script `csv-into-dynamodb.py` to import CSV files into DynamoDB tables. 
 You can run the script with the following command:
 
 ```python
-python csv-into-dynamodb.py --file /path/to/your/csv/file.csv --table your-dynamodb-table-name
+python csv-into-dynamodb.py --file file.csv --table table_name
 ```
 
 Alternatively, you can use the short options:
 
 ```python
 
-python csv-into-dynamodb.py -f /path/to/your/csv/file.csv -t your-dynamodb-table-name
+python csv-into-dynamodb.py -f file.csv -t table_name
 ```
 
 If you need help, you can use the `--help` or `-h` flag:
