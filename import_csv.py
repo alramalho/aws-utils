@@ -7,9 +7,6 @@ csv.field_size_limit(sys.maxsize)
 
 dynamodb = boto3.resource('dynamodb')
 
-tableName = 'table_name' # FIXME
-filename = './table.csv' # FIXME
-
 if __name__ == "__main__":
     # Parser setup
     parser = argparse.ArgumentParser()
