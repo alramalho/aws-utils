@@ -3,7 +3,7 @@ import argparse
 
 def delete_table_entries(table_name, aws_endpoint=None):
     if aws_endpoint:
-        dynamodb = boto3.resource('dynamodb')
+        dynamodb = boto3.resource('dynamodb', endpoint_url=aws_endpoint)
     else:
         dynamodb = boto3.resource('dynamodb')
     table = dynamodb.Table(table_name)
@@ -18,4 +18,3 @@ if __name__ == '__main__':
     parser.add_argument('-e', '--aws_endpoint', type=str, help='AWS endpoint URL (optional).')
     args = parser.parse_args()
     delete_table_entries(args.table_name, args.aws_endpoint)
-    print('Done ✅')
