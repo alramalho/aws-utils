@@ -1,6 +1,9 @@
 # DyanamoDB Utils 👨‍💻
 This project provides several utilities for working with DynamoDB. Each utility is a standalone Python file that uses argparse for command-line argument parsing.
 
+- Import CSV into dynamoDB 
+- Wip out Dynamodb table
+
 ## Installation
 Clone the repository.
 Install the required packages with pip install -r requirements.txt.
