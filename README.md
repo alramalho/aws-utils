@@ -13,7 +13,7 @@ wipe_table.py
 This utility wipes all the items from a DynamoDB table.
 
 ```
-python wipe_table.py --table_name <table_name> [--aws_endpoint <aws_endpoint>]
+python wipe_table.py <table_name> [--aws_endpoint <aws_endpoint>]
 ```
 
 **Arguments**
