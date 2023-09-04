@@ -1,5 +1,5 @@
-# DyanamoDB Utils 👨‍💻
-This project provides several utilities for working with DynamoDB. Each utility is a standalone Python file that uses argparse for command-line argument parsing.
+# AWS Utils 👨‍💻
+This project provides several utilities for working with AWS. Each utility is a standalone Python file that uses argparse for command-line argument parsing.
 
 - Import CSV into dynamoDB 
 - Wip out Dynamodb table
