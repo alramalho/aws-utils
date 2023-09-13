@@ -3,6 +3,7 @@ This project provides several utilities for working with AWS. Each utility is a 
 
 - Import CSV into dynamoDB 
 - Wip out Dynamodb table
+- Scan infinite Dynamodb table items
 
 ## Installation
 Clone the repository.

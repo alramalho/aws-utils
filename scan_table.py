@@ -5,7 +5,7 @@ from pprint import pprint
 import boto3
 
 
-def scan_table(table_name, aws_endpoint=None, max_items=None):
+def scan_table(table_name, aws_endpoint=None, max_items=10000):
     if aws_endpoint:
         dynamodb = boto3.resource('dynamodb', endpoint_url=aws_endpoint)
         client = boto3.client('dynamodb', endpoint_url=aws_endpoint)
