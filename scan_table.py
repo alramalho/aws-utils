@@ -45,7 +45,7 @@ def scan_table(table_name, aws_endpoint=None, max_items=10000):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Scan DynamoDB table entries.')
-    parser.add_argument('-t', '--table_name', type=str, help='Name of the table to scan.')
+    parser.add_argument('-t', '--table_name', type=str, help='Name of the table to scan.', required=True)
     parser.add_argument('-e', '--aws_endpoint', type=str, help='AWS endpoint URL (optional).')
     parser.add_argument('-m', '--max_items', type=int, help='Maximum number of items to fetch. If not specified, fetches all items.')
     args = parser.parse_args()
