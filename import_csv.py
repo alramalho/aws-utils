@@ -4,7 +4,9 @@ import boto3
 import argparse
 from botocore.exceptions import ClientError
 
-def filter_and_import_csv_to_dynamodb(table_name, csv_file, columns_to_keep=None):
+
+def filter_and_import_csv_to_dynamodb(table_name, csv_file, profile, region, columns_to_keep=None):
+    boto3.setup_default_session(profile_name=profile, region_name=region)
     dynamodb = boto3.resource('dynamodb')
     table = dynamodb.Table(table_name)
 
@@ -35,12 +37,15 @@ def filter_and_import_csv_to_dynamodb(table_name, csv_file, columns_to_keep=None
                 print(f"Error importing item: {item}")
                 print(e.response['Error']['Message'])
 
+
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Import filtered CSV data to DynamoDB")
     parser.add_argument("-t", "--table", type=str, help="Name of the DynamoDB table", required=True)
     parser.add_argument("-f", "--file", type=str, help="Path to the CSV file", required=True)
+    parser.add_argument("-p", "--profile", type=str,help="Profile name for AWS configuration", default='default')
+    parser.add_argument("-r", "--region", type=str,help="Region name for AWS configuration", default='eu-west-1')
     parser.add_argument("-k", "--keep", type=str, nargs='*', help="Columns to keep (space-separated). If not specified, all columns will be kept.", default=None)
     args = parser.parse_args()
 
-    filter_and_import_csv_to_dynamodb(args.table, args.file, args.keep)
+    filter_and_import_csv_to_dynamodb(args.table, args.file, args.profile, args.keep)
     print("Filtered import complete!")

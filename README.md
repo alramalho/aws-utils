@@ -6,15 +6,25 @@ This project provides several utilities for working with AWS. Each utility is a 
 - Scan infinite Dynamodb table items
 
 ## Installation
-Clone the repository.
-Install the required packages with pip install -r requirements.txt.
+- clone the repository
+- create virtual environment `python -m venv .venv`
+- switch to virtual environment `source .venv/bin/activate`
+- install the required packages with `pip install -r requirements.txt`
+- when done, exit virtual environment with typing `deactivate`
 
 ## Example Usage
-wipe_table.py
+__wipe_table.py__
 This utility wipes all the items from a DynamoDB table.
-
 ```
 python wipe_table.py <table_name> [--aws_endpoint <aws_endpoint>]
+```
+__import_csv.py__
+This utility imports csv file (key, value) into selected DynamoDB table.
+```
+python import_csv.py --table=my_table --file=path_to_my_file.csv
+
+# optional parameters with default values overriden
+python import_csv.py --table=my_table --file=path_to_my_file.csv --profile=my-profile --region=eu-west-2
 ```
 
 **Arguments**
