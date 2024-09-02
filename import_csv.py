@@ -47,5 +47,5 @@ if __name__ == "__main__":
     parser.add_argument("-k", "--keep", type=str, nargs='*', help="Columns to keep (space-separated). If not specified, all columns will be kept.", default=None)
     args = parser.parse_args()
 
-    filter_and_import_csv_to_dynamodb(args.table, args.file, args.profile, args.keep)
+    filter_and_import_csv_to_dynamodb(args.table, args.file, args.profile, args.region, args.keep)
     print("Filtered import complete!")
