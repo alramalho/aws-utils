@@ -12,6 +12,30 @@ This project provides several utilities for working with AWS. Each utility is a 
 - install the required packages with `pip install -r requirements.txt`
 - when done, exit virtual environment with typing `deactivate`
 
+## AWS requirements
+The user/profile needs to have correct permissions to create and modify `DynamoDB` configuration.
+```
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "DynamoDBEdit",
+            "Effect": "Allow",
+            "Action": [
+                "dynamodb:BatchWriteItem",
+                "dynamodb:PutItem",
+                "dynamodb:DeleteItem",
+                "dynamodb:GetItem",
+                "dynamodb:Scan",
+                "dynamodb:Query",
+                "dynamodb:UpdateItem"
+            ],
+            "Resource": "*"
+        }
+    ]
+}
+```
+
 ## Example Usage
 __wipe_table.py__
 This utility wipes all the items from a DynamoDB table.
