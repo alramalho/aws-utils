@@ -167,7 +167,7 @@ def delete_table_entries(table_name, aws_endpoint=None, verbose=False, primary_k
         
     return (True, initial_count, deleted_count, 0)
 
-if __name__ == '__main__':
+def main():
     parser = argparse.ArgumentParser(description='Delete all entries from DynamoDB table.')
     parser.add_argument('-t', '--table_name', type=str, required=True, help='Name of the table to delete entries from.')
     parser.add_argument('-e', '--aws_endpoint', type=str, help='AWS endpoint URL (optional).')
@@ -198,3 +198,6 @@ if __name__ == '__main__':
     else:
         print(f"Error: Failed to wipe {args.table_name} completely. Only {deleted_count} of {initial_count} items were deleted.")
         sys.exit(1)
+
+if __name__ == '__main__':
+    main() 
