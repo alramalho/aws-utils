@@ -23,6 +23,7 @@ setup(
             "aws-export-csv=aws_utils.export_to_csv:main",
             "aws-import-json=aws_utils.import_json:main",
             "aws-mongo-to-dynamo=aws_utils.mongo_to_dynamo:main",
+            "aws-utils=aws_utils.list_utils:main",
         ],
     },
     author="alramalho",
